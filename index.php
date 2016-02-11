@@ -2,6 +2,8 @@
 
 require_once 'core/init.php';
 
-DB::getInstance();
-
-echo "Hello from my world!";
+$user = DB::getInstance()->insert('users', array(
+        'username' => 'John',
+        'password' => 'pass',
+        'salt'     => 'salt'
+));
